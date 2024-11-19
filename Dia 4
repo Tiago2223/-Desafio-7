@@ -1,0 +1,18 @@
+const numeroSecreto = 3;
+const tentativasMaximas= 3
+function obterChute() {
+  return parseInt(prompt("Digite o seu chute: "));
+}
+  for (let tentativa = 1; tentativa <= tentativasMaximas; tentativa+1) {
+  const chute = obterChute();
+  if (chute === numeroSecreto) {
+    console.log("Parabéns! Você acertou!");
+    break;
+  } else {
+    console.log("Você errou!");
+  }
+}
+
+if (chute !== numeroSecreto) {
+  console.log(`O número secreto era ${numeroSecreto}`);
+}

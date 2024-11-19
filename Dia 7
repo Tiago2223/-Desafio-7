@@ -1,0 +1,50 @@
+função soma(valor1, valor2){
+    retornar Número(valor1) + Número(valor2);
+}
+
+função subtracao(valor1, valor2){
+    retornar Número(valor1) - Número(valor2);
+}
+
+função multiplicacao(valor1, valor2){
+    retornar Número(valor1) * Número(valor2);
+}
+
+function divisão(valor1, valor2){
+    retornar Número(valor1) / Número(valor2);
+}
+
+deixe valor1;
+deixe valor2;
+deixe operacao = "";
+
+do { //usando o 'do...while', já que a primeira vez sempre vamos entrar
+	
+    operação = prompt(`Qual operação você quer realizar? Responda 'soma', 'subtração', 'multiplicação', 'divisão' ou 'sair'.`);	
+    while (operacao != "soma" && operação != "subtração" && operação != "multiplicação" && operação != "divisão" && operação != "sair") { //enquanto o texto lido for diferente de "soma" , "subtração", "multiplicação", "divisão" e "sair", exibir que não foi reconhecido e perguntar novamente
+	alert(`Operação não reconhecida!`);
+	operação = prompt(`Qual operação você quer realizar? Responda 'soma', 'subtração', 'multiplicação', 'divisão' ou 'sair'.`);
+    }
+	
+    if (operacao === "sair"){ //se o texto lido for "sair", sair do loop e da calculadora
+		quebrar;	
+    }
+	
+    valor1 = prompt(`Insira o primeiro valor:`);
+    valor2 = prompt(`Insira o segundo valor:`);
+    switch (operação) {
+        caso 'soma':
+          alert(`O resultado da ${operação} é ${soma(valor1, valor2)}`);
+          quebrar;
+        caso 'subtração':
+            alert(`O resultado da ${operação} é ${subtracao(valor1, valor2)}`);
+            quebrar;
+        caso 'multiplicação':
+            alert(`O resultado da ${operação} é ${multiplicacao(valor1, valor2)}`);
+            quebrar;
+        caso 'divisão':
+            alert(`O resultado da ${operação} é ${divisao(valor1, valor2)}`);
+            quebrar;
+    }
+} while(operação === "soma" || operação === "subtração" || operação === "multiplicação" || operação === "divisão")
+alert(`Até a próxima!`);

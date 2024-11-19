@@ -1,0 +1,21 @@
+while (true) {
+  const adicionarItem = prompt("Deseja adicionar um item à lista de compras? (sim/não)").toLowerCase();
+  if (adicionarItem === 'não') {
+    break;
+  }
+  const item = prompt("Qual item você deseja adicionar?");
+  const categoria = prompt("Em qual categoria? (frutas, laticínios, congelados, doces)").toLowerCase();  
+  if (!listaDeCompras[categoria]) {
+    listaDeCompras[categoria] = []; // Cria um novo array para a categoria
+  }
+{
+  listaDeCompras[categoria].push(item);
+}
+
+console.log("Sua lista de compras:");
+for (const categoria in listaDeCompras) {
+  console.log(`\n${categoria}:`);
+  for (const item of listaDeCompras[categoria]) {
+    console.log(`- ${item}`);
+  }
+}

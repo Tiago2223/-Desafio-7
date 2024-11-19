@@ -1,0 +1,43 @@
+{
+  const area = prompt("Qual área você deseja seguir? Front-End ou Back-End?").toLowerCase();
+  if (area === 'frontend') {
+    const frameworkFront = prompt("Qual framework você quer aprender? React ou Vue?").toLowerCase();
+    if (frameworkFront === 'react') {
+      console.log("Você escolheu React! Uma ótima opção para criar interfaces dinâmicas.");
+    } else  (frameworkFront === 'vue') {
+      console.log("Você escolheu Vue! Uma ótima opção para iniciantes e projetos de médio porte.");
+    } else {
+      console.log("Opção inválida. Considerando React como padrão.");
+    }
+  } else if (area === 'backend') {
+    const linguagemBack = prompt("Qual linguagem você quer aprender? C# ou Java?").toLowerCase();
+    if (linguagemBack === 'c#') {
+      console.log("Você escolheu C#! Ideal para desenvolvimento .NET.");
+    } else  (linguagemBack === 'java') {
+      console.log("Você escolheu Java! Uma linguagem robusta e versátil.");
+    } else {
+      console.log("Opção inválida. Considerando Java como padrão.");
+    }
+  } else {
+    console.log("Opção inválida. Por favor, escolha Front-End ou Back-End.");
+  }
+  
+  const especializacao = prompt("Você quer se especializar na área escolhida ou se tornar Fullstack?").toLowerCase();
+  if (especializacao === 'especializar') {
+    console.log("Ótimo! A especialização é uma ótima forma de se aprofundar em uma área.");
+  } else  (especializacao === 'fullstack') {
+    console.log("Ser Fullstack é incrível! Você terá um conhecimento mais abrangente.");
+  } else {
+    console.log("Opção inválida. Considerando especialização como padrão.");
+  }
+  let maisTecnologias = true;
+  while (maisTecnologias) {
+    const novaTecnologia = prompt("Tem mais alguma tecnologia que você gostaria de aprender? (sim/não)").toLowerCase();
+    if (novaTecnologia === 'sim') {
+      const tecnologia = prompt("Qual tecnologia?");
+      console.log(`Excelente! ${tecnologia} é uma ótima escolha!`);
+    } else {
+      maisTecnologias = false;
+    }
+  }
+}

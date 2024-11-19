@@ -1,0 +1,4 @@
+Let nome = prompt (' Qual e o seu nome ');
+Let idade = prompt (' Qual e a sua idade ');
+Let linguagem = prompt (' Qual e a linguagem que está estudando '); 
+Console.log (' Oi ${ nome }, você tem ${ idade} e está estudando ${ linguagem}');
